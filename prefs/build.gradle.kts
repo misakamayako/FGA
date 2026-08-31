@@ -1,11 +1,10 @@
 plugins {
     id("com.android.library")
-    id("kotlin-android")
     id("com.google.devtools.ksp")
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 37
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -23,6 +22,9 @@ android {
             initWith(getByName("release"))
         }
     }
+    // run tests in CI builds instad of debug
+    testBuildType = "ci"
+
     namespace = "io.github.fate_grand_automata.prefs"
 }
 

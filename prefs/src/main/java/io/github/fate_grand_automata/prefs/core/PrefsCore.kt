@@ -48,6 +48,7 @@ class PrefsCore @Inject constructor(
     val hidePlayButton = maker.bool("hide_play_button")
     val debugMode = maker.bool("debug_mode")
     val autoStartService = maker.bool("auto_start_service")
+    val checkForUpdates = maker.bool("check_for_updates", true)
 
     val hideSQInAPResources = maker.bool("hide_sq_in_ap_resources", true)
 
@@ -56,7 +57,7 @@ class PrefsCore @Inject constructor(
     val receiveEmbersWhenGiftBoxFull = maker.bool("receive_embers_when_gift_box_full")
 
     val supportSwipesPerUpdate = maker.int("support_swipes_per_update_x", 10)
-    val supportMaxUpdates = maker.int("support_max_updates_x", 5)
+    val supportMaxUpdates = maker.int("support_max_updates_x", 20)
 
     val minSimilarity = maker.int("min_similarity", 80)
     val mlbSimilarity = maker.int("mlb_similarity", 70)
